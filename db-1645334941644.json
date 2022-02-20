@@ -1,0 +1,52 @@
+{
+  "products": [
+    {
+      "id": 1,
+      "title": "Cabbage",
+      "category": "Vegetables",
+      "remaining": "1222",
+      "description": "Vegetable Fresh harvest from farm directly",
+      "location": "Malang Indonesia"
+    },
+    {
+      "id": 2,
+      "title": "Paprika",
+      "category": "Vegetables",
+      "remaining": "4632",
+      "description": "Vegetable Fresh harvest from farm directly",
+      "location": "Surabaya Indonesia"
+    },
+    {
+      "id": 3,
+      "title": "Carrot",
+      "category": "Vegetables",
+      "remaining": "2332",
+      "description": "Vegetable Fresh harvest from farm directly",
+      "location": "Semarang Indonesia"
+    },
+    {
+      "id": 4,
+      "title": "Pinneapple",
+      "category": "Fruits",
+      "remaining": "1872",
+      "description": "Fresh Fruit harvest from farm directly",
+      "location": "Surabaya Indonesia"
+    },
+    {
+      "id": 5,
+      "title": "Watermelon",
+      "category": "Fruits",
+      "remaining": "8743",
+      "description": "Fresh Fruit harvest from farm directly",
+      "location": "Blitar Indonesia"
+    },
+    {
+      "id": 6,
+      "title": "Gandum",
+      "category": "Vegetables",
+      "remaining": "2000",
+      "description": "Vegetable Fresh harvest from farm directly",
+      "location": "Trenggalek Indonesia"
+    }
+  ]
+}
