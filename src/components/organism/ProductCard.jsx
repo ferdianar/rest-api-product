@@ -15,6 +15,16 @@ const ProductCard = () => {
               setProducts(data)
        }
 
+       const DeleteProduct = async (id) => {
+              await fetch(`http://localhost:5500/vegetables/${id}`, {
+                     method: "DELETE",
+                     headers: {
+                            "Content-Type": "application/json"
+                     }
+              })
+              FetchProductItems()
+       }
+
        return (
               <React.Fragment>
                      {
@@ -29,8 +39,8 @@ const ProductCard = () => {
                                                  <small>{productItems.location}</small>
                                           </div>
                                           <div className="flex flex-col gap-y-2 md:mt-0 mt-4">
-                                                 <a href={`/update/${productItems.id}`} className="py-1 px-3 font-medium text-sm text-white bg-green-600 hover:bg-green-700 rounded-md">Edit</a>
-                                                 <a href="" className="py-1 px-3 font-medium text-sm text-white bg-red-600 hover:bg-red-700 rounded-md">Delete</a>
+                                                 <Link to={`/update/${productItems.id}`} className="py-1 px-3 font-medium text-sm text-white bg-green-600 hover:bg-green-700 rounded-md">Edit</Link>
+                                                 <button onClick={() => DeleteProduct(productItems.id)} className="py-1 px-3 font-medium text-sm text-white bg-red-600 hover:bg-red-700 rounded-md">Delete</button>
                                           </div>
                                    </div>
                             ))
