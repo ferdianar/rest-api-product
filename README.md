@@ -1,7 +1,9 @@
-# REST API Product with React Router and JSON Server
+# React REST API
+Create Read Update and Delete Product with React, React Router and JSON Server. Styling using Tailwind CSS
+
+<img src="https://raw.githubusercontent.com/ferdianar/rest-api-product/master/src/productpreview.png" alt="preview" />
 
 ## Available Scripts
-
 In the project directory, you can run:
 
 ### `npm start`
