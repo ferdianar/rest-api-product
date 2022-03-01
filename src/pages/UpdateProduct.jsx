@@ -2,7 +2,6 @@ import React, { useState, useEffect } from 'react'
 import { useNavigate, useParams } from 'react-router-dom'
 
 const UpdateProduct = () => {
-       const [productId, setProductId] = useState(0)
        const [title, setTitle] = useState("")
        const [location, setLocation] = useState("")
        const [description, setDescription] = useState("")
@@ -17,7 +16,6 @@ const UpdateProduct = () => {
               const response = await fetch(`http://localhost:5500/vegetables/${id}`)
               const data = await response.json()
 
-              setProductId(data.productId)
               setTitle(data.title)
               setLocation(data.location)
               setDescription(data.description)
@@ -28,7 +26,7 @@ const UpdateProduct = () => {
        const updateProduct = async (event) => {
               event.preventDefault()
 
-              const productData = { productId, title, location, description }
+              const productData = { title, location, description }
 
               await fetch(`http://localhost:5500/vegetables/${id}`, {
                      method: "PUT",

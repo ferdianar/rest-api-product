@@ -2,8 +2,6 @@ import React, { useState, useEffect } from 'react'
 import { useNavigate } from "react-router-dom"
 
 const CreateProduct = () => {
-       const [id, setId] = useState(0)
-       const [productId, setProductId] = useState(2000)
        const [title, setTitle] = useState("")
        const [location, setLocation] = useState("")
        const [description, setDescription] = useState("")
@@ -12,7 +10,7 @@ const CreateProduct = () => {
 
        const GenerateId = () => {
               const randomNumbers = Math.floor(1000 + Math.random() * 5000)
-              setProductId(randomNumbers)
+              // setProductId(randomNumbers)
 
               console.log(randomNumbers)
        }
@@ -24,7 +22,7 @@ const CreateProduct = () => {
        const OnCreateData = async (event) => {
               event.preventDefault()
 
-              const productData = { productId, title, location, description }
+              const productData = { title, location, description }
               await fetch(`http://localhost:5500/vegetables`, {
                      method: "POST",
                      body: JSON.stringify(productData),
@@ -33,7 +31,7 @@ const CreateProduct = () => {
                      }
               })
               setTimeout(() => {
-                     navigate("/")
+                     navigate("/product")
               }, 3000)
        }
 
